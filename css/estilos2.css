@@ -2,13 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: black;
+  
 }
 
 header .seccion12{
   height: 230px;
   background-image: linear-gradient(to bottom,black,gray);
-
+  background-color: black;
 
 }
 section .seccion22{
@@ -24,7 +24,7 @@ section .seccion22{
     border-radius: 10px;
 }
 
-#texto{
+div .texto{
   width: 650px;
   height: 300px;
   margin-left: 500px;

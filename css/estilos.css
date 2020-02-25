@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
- #seccion1{
+header .seccion1{
   height: 230px;
   background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet,white);
 
@@ -22,7 +22,7 @@ section .seccion2{
     border-radius: 10px;
 }
 
-#texto{
+div .texto1{
   width: 650px;
   height: 300px;
   margin-left: 500px;

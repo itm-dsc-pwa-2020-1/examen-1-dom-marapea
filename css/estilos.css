@@ -1,0 +1,80 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ #seccion1{
+  height: 230px;
+  background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet,white);
+
+}
+section .seccion2{
+  margin: auto;
+  width: 1200px;
+  height: 400px;
+  background-image: linear-gradient(to bottom, white,gray);
+  border-radius: 10px;
+}
+#foto{
+  width: 450px;
+  height: 400px;
+    border-radius: 10px;
+}
+
+#texto{
+  width: 650px;
+  height: 300px;
+  margin-left: 500px;
+  margin-top: -370px;
+  font-size: 40px;
+  font-family: Helvetica;
+  text-align: justify;
+}
+img {
+  width: 100%;
+}
+
+
+#logo{
+  width:150px;/*ancho*/
+  height:100px;/*alto*/
+  margin-left:50px;
+  margin-top: auto;
+  margin-bottom: 70px;
+
+}
+#slogan{
+  width:280px;/*ancho*/
+  height:180px;/*alto*/
+  margin-left:350px;
+  margin-top:45px;
+}
+
+#facebook,#twitter,#instragram{
+  width:60px;/*ancho*/
+  height:60px;/*alto*/
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+#facebook{
+  margin-left: 220px;
+}
+
+div li {
+	border: none;
+	outline: none;
+	padding: 20px 50px;
+	border-radius: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 20px;
+  background-image: linear-gradient(to bottom,indigo,violet);
+  padding-top: 10px;
+}
+
+
+

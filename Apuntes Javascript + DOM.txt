@@ -1,0 +1,147 @@
+
+Apuntes Javascript + DOM
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+NODO
+
+“todas las etiquetas del documento web de tipo párrafo”.
+“todas las etiquetas del documento que lleven una clase de nombre X” .
+“la única etiqueta del documento que lleve el identificador Y”.
+
+Nota: Lo que hasta ahora se han llamado etiquetas ahora han pasado a ser elementos o nodos.
+
+Nota 2: El contenido de una etiqueta HTML era todo el html anidado en su interior.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ELEMENTOS DE UN NODO
+
+nodo = elemento + atributos + contenido anidado
+
+Si Elemento = <p>Hola <span>Crayola!!!</span></p>
+
+Contenido del Elemento <p> = Hola <span>Crayola!!!</span>
+Contenido del Elemento <span> = Crayola!!!
+
+Accesar al contenido:
+
+elemento.innerHTML : contenido con todo y etiquetas HTML
+elemento.textContent : sólo contenido sin etiquetas HTML
+
+- - - - - - - - - - - - - - - - - - - 
+
+EXTRAER EL CONTENIDO DE UNA ETIQUETA
+
+var textoAnidado = document.getElementsByTagName("p")[0].innerHTML
+
+devuelve
+
+"Hola <span>Crayola!!!</span>"
+
+Otros métodos:
+
+document.getElementById( )
+document.getElementsByTagName( )
+document.getElementsByClassName( )
+document.getElementsByName( )
+document.querySelector( ) 
+document.querySelectorAll( )
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+NAVEGAR ENTRE NODOS
+
+elemento.parentNode
+elemento.firstElementChild
+elemento.lastElementChild
+elemento.nextElementSibling
+elemento.previousElementSibling
+elemento.childNodes
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+EXTRAER EL CONTENIDO DE UNA ETIQUETA
+
+elemento.setAttribute("src","img/foto.png")
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Código de ejemplo
+
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Lenguajes de programación</title>
+  </head>
+
+  <body>
+    <h1 class="titulo">Lenguajes de programación</h1>
+    <div id="contenido">
+      <ul id="lenguajes">
+        <li id="javascript">JavaScript</li>
+        <li id="php">PHP</li>
+        <li id="python">Python</li>
+        <li id="ruby">Ruby</li>
+      </ul>
+    </div>
+
+    <script src="modificar.js"></script>
+  </body>
+
+</html>
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+AGREGAR UN list item
+
+// Modificación del contenido HTML de la lista
+document.getElementById("lenguajes").innerHTML += '<li id="c">C</li>';
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ELIMINAR UNA LISTA
+
+// Supresión del contenido HTML de la lista
+document.getElementById("lenguajes").innerHTML = '';
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+AGREGAR TEXTO
+
+// Modificación del contenido de texto del primer título
+document.querySelector("h1").textContent += " más populares en la web";
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+DEFINIR UN ATRIBUTO
+
+// Definición del atributo "id" del primer título h1. El valor otorgado al atributo id es "titulo"
+document.querySelector("h1").setAttribute("id", "titulo2");
+
+Otra forma:
+
+document.querySelector("h1").id = "titulo";
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+AÑADIR O SUPRIMIR CLASES
+
+var tituloElt = document.querySelector("h1"); // Acceso al primer título h1
+tituloElt.classList.remove("titulo"); // Supresión de la clase "titulo"
+tituloElt.classList.add("encabezado"); // Adición de la clase "encabezado"
+console.log(tituloElt);
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+AÑADIR UN NUEVO ELEMENTO
+
+var javaElt = document.createElement("li"); // Creación de un elemento li
+javaElt.id = "java"; // Definición de su identificador
+javaElt.textContent = "Java"; // Definición de su contenido textual
+document.getElementById("lenguajes").appendChild(javaElt); // Inserción del nuevo elemento
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
